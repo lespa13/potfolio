@@ -1,1 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+   scroll-behavior: smooth;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in-out;
+}
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.5s ease;
+}
 
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f0f0f0;
+    border-top: 5px solid #6a11cb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.box{
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    
+    flex-direction: column;
+}
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    font-size: 2.5em;
+}
+nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.nav_th{
+    width: 13%;
+}
+/* Основные стили для кнопок */
+nav button {
+    padding: 5px 10px;
+    border: 2px solid #1e90ff; /* Цвет рамки */
+    background-color: #fff;
+    color: #1e90ff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Плавные переходы */
+
+}
+
+/* Стили для активной кнопки */
+nav button.active {
+    background-color: #1e90ff;
+    color: #fff;
+    border-color: #1e90ff;
+}
+
+/* Эффект наведения */
+nav button:hover {
+    background-color: #1e90ff;
+    color: #fff;
+    border-color: #1e90ff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Эффект нажатия */
+nav button:active {
+    transform: scale(0.95); /* Немного уменьшаем размер при нажатии */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для кнопок в шапке */
+header nav button {
+    margin: 0 10px; /* Расстояние между кнопками */
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffeb3b;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+section {
+    margin-bottom: 50px;
+}
+#about {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    text-align: center;
+   
+}
+#about div{
+    width: 48%;
+    height: 500px;
+}
+.about_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about_div h2 {
+    font-size: 2em;
+    color: #2575fc;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about_div p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.about_div ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.about_div ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+.gif_div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#work {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.portfolio-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+.portfolio-item .content {
+    padding: 15px;
+}
+.portfolio-item .content h3 {
+    margin-bottom: 10px;
+}
+.contact {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #6a11cb;
+    color: white;
+    margin-top: 20px;
+}
+footer p {
+    font-size: 0.9em;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.skils{
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: left;
+}
+.skils h2{
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+/* .sk_1{
+    width: 40%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;    
+} */
+.sk_2{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+.sk_html{
+    width: 80%;
+    height: 25px;
+    background: gainsboro;
+    border-radius:   50px;
+
+    display: flex;
+    flex-direction: row;
+}
+.sk_text{
+    width: 20%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:   50px 0px 0px 50px;
+    text-align: center;
+    background: #2575fc;
+    color: white;
+}
+.sk_text img{
+    width: 15%;
+    margin-left: 10px;
+}
+.sk_skill{
+    width: 70%;
+    
+    border-radius:   0px 50px 50px 0px;
+    height: 25px;
+    animation: shrink 2s forwards;
+    background: #6a11cb;
+}
+
+.sk_skill1{
+    width: 70%;
+    border-radius:   0px 50px 50px 0px;
+    animation: shrink1 2s forwards;
+    height: 25px;
+    background: #6a11cb;
+}
+.sk_skill2{
+    width: 60%;
+    height: 25px;
+    border-radius:   0px 50px 50px 0px;
+    animation: shrink2 2s forwards;
+    background: #6a11cb;
+}
+.sk_skill3{
+    width: 50%;
+    animation: shrink3 2s forwards;
+    height: 25px;
+    background: #6a11cb;
+    border-radius:   0px 50px 50px 0px;
+
+}
+.sk_skill4{
+    width: 40%;
+    height: 25px;
+    border-radius:   0px 50px 50px 0px;
+    animation: shrink4 2s forwards;
+    background: #6a11cb;
+}
+.sk_skill5{
+    width: 30%;
+    border-radius:   0px 50px 50px 0px;
+    animation: shrink5 2s forwards;
+    height: 25px;
+    background: #6a11cb;
+}
+.sk_skill6{
+    width: 30%;
+    border-radius:   0px 50px 50px 0px;
+    animation: shrink6 2s forwards;
+    height: 25px;
+    background: #6a11cb;
+}
+.sk_skill7{
+    width: 30%;
+    border-radius:   0px 50px 50px 0px;
+    animation: shrink7 2s forwards;
+    height: 25px;
+    background: #6a11cb;
+}
+@keyframes shrink {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 79%;
+    }
+}
+@keyframes shrink1 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 79%;
+    }
+}
+@keyframes shrink2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+@keyframes shrink3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 68%;
+    }
+}
+@keyframes shrink4 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+@keyframes shrink5 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes shrink6 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 58%;
+    }
+}
+@keyframes shrink7 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 56%;
+    }
+}
+@media (max-width: 480px) {
+    #about {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        text-align: center;
+       
+    }
+    #about div{
+        width: 100%;
+        height: 300px;
+    }
+    .about_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        font-size: 13px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        line-height: 1;
+        text-align: left;
+    }
+    
+    header{
+        display: none;
+    }
+
+
+    .skils{
+        width: 150%;
+        height: 300px;
+        margin-top: 120px;
+        display: flex;
+       position:left;
+       margin-left: -30%;
+
+    }
+    .skils h2{
+        height: 30px;
+        width: 100%;
+        text-align: left;
+        margin-left: 20%;
+    }
+  
+    .contact{
+        border-radius: 10px;
+    }
+}
