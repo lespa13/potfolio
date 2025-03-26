@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dripkit-OFFICIAL</title>
+    <link rel="shortcut icon" href="img/logo.png" />
+</head>
+<body>
+  <h1 class="big_h1">ПРОЧИТАЙ!</h1>
+  <div class="hello" id="hello">
+    <div class="hello_div1">
+      <h1>Привіт!</h1><br>  
+      <ul>
+        <h3>Хто ми?</h3>
+        <li>dripkit-це інстаграм магазин аксесуарів та одягу який допоможе тобі покращити свій аутфіт.Не хочешь чекати свій товар з Китаю два тижні?Не проблема,в нас є кращі товари(разом з якими ми можемо покласти свій подарунок😊) з швидшою доставкою,</li><br> 
+        <h3>У чому сенс сайту?</h3>
+        <li>На жаль,поки що(!!) цей сайт є лише визитівкою нашого магазину який діє у Телеграм та Інстаграм,але на ньому буде інформація яка не завжи буде на наших акаунтах у соц.мережах.Ми маємо надію ві оцінете нашу працю у створенні сайту!</li><br> 
+        <h3>Розігриш</h3>
+        <li>На честь відкриття нашого магазину,мі запускаємо розігриш!Між першими п'ятьма покупцями нашого магазину ми розіграємо знижку у 50% на товар який він обере!Не хвилюйтеся,тим кому не пощастить,без подарунків не залишуться,як і ті хто не встиг взяти участь😊</li><br> 
+      </ul>
+      <input type="button" id="hello_btn" value="ПЕРЕЙТИ ДО МАГАЗИНУ" class="floating-button">
+
+    </div>
+    <div class="hello_div2">
+      <img src="img/start-page .png" width="90%" alt="">
+    </div>
+  </div>
+    <div class="box">
+        <nav>
+          <a class="menu__item" href="#t">Ми</a></li>
+            <a class="menu__item" href="#hits">Хіти</a></li>
+            <img src="img/logo.png" alt="" width="7%">
+            <a class="menu__item" href="#footer">Про нас</a></li>
+            <a class="menu__item" href="#col">Гороскоп</a></li>
+        </nav>
+        <!--<div class="b_f">-->
+        <!--    <p>В НАС ЧОРНА П'ЯТНИЦЯ</p>-->
+        <!--   </div><br>-->
+       
+        <header>
+            <div class="h_text" id="t">
+                <h1>ЗРОБИМО усе<br>щоб у наших<br>КОТИКІВ було ВСЕ!</h1>
+            </div>
+            <div class="h_img">
+                <img src="img/img_h.png" alt="" >
+            </div>
+        </header>
+        <div class="hits" id="hits">
+            <p>НАШІ ХІТИ</p>
+           </div><br>
+
+           <main>
+            <!-- Первая карточка товара -->
+            <div class="cart" onclick="openModal('product-modal-1')">
+              <img src="img/kit.png" alt="" width="60%">
+              <h2>Кулон "Хелоу Кітті"😻</h2>
+            </div>
+            <div id="product-modal-1" class="modal" onclick="closeModal(event, 'product-modal-1')">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal(event, 'product-modal-1')">&times;</span>
+                <h2>Кулон "Хелоу Кітті"😻</h2>
+                <img src="img/kit.png" alt="" width="60%">
+                <p>Ідеально прикрасить твій милий образ!
+                  Найгарніший варіант подарунку для своєї дівчини😍<br>
+                  💳149грн<br>
+                  ⚜️dripkit.</p>
+              </div>
+            </div>
+      
+            <!-- Вторая карточка товара -->
+            <div class="cart" onclick="openModal('product-modal-2')">
+              <img src="img/krest.png" alt="" width="60%">
+              <h2>Кулон✝️</h2>
+            </div>
+            <div id="product-modal-2" class="modal" onclick="closeModal(event, 'product-modal-2')">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal(event, 'product-modal-2')">&times;</span>
+                <h2>Кулон✝️</h2>
+                <img src="img/krest.png" alt="" width="60%">
+                <p>Треба прикрасити свою шийку?Ми знаємо що тобі запропонувати😉
+                  Гарний срібний кулон у вантажному стилі,допоможе тобі в цьому!<br>
+                  💳130грн<br>
+                  ⚜️dripkit.</p>
+              </div>
+            </div>
+      
+            <!-- Третья карточка товара -->
+            <div class="cart" onclick="openModal('product-modal-3')">
+              <img src="img/kwit.png" alt="" width="60%">
+              <h2>Кільце "Чорний квіт"🕷</h2>
+            </div>
+            <div id="product-modal-3" class="modal" onclick="closeModal(event, 'product-modal-3')">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal(event, 'product-modal-3')">&times;</span>
+                <h2>Кільце "Чорний квіт"🕷</h2>
+                <img src="img/kwit.png" alt="" width="60%">
+                <p>Кільце у чорно-срібному кольорі ідеально доповнить твій аутфіт😉<br>
+                  💳123грн<br>
+                  ⚜️dripkit.</p>
+              </div>
+            </div>
+      
+            <!-- Четвертая карточка товара -->
+            <div class="cart" onclick="openModal('product-modal-4')">
+              <img src="img/rem.png" alt="" width="60%">
+              <h2>Ремінь у2k</h2>
+            </div>
+            <div id="product-modal-4" class="modal" onclick="closeModal(event, 'product-modal-4')">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal(event, 'product-modal-4')">&times;</span>
+                <h2>Ремінь у2k</h2>
+                <img src="img/rem.png" alt="" width="60%">
+                <p>Стильний ремінець на тебе😍
+                  Довжина:1.03м<br>
+                  💳250грн<br>
+                  ⚜️dripkit.</p>
+              </div>
+            </div>
+          </main>
+        <h1 id="col">Вривайся у новий рік зі знаннями!</h1><br>
+        <p id="col">Ми підготували для тебе гороскоп щоб ти знав чого очікувати у новому році<br>
+        Підказка:у новому році ви повині взяти кулон "Хелоу Кітті" для своєї коханої</p><br>
+       
+        <div class="zodiac-container">
+          <!-- Овен -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-1')">
+             
+              <h3>Овен♈</h3>
+          </div>
+          <div id="zodiac-modal-1" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-1')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-1')">&times;</span>
+                  <img src="img/овен.jpg" alt="Овен">
+                  <h2>Овен</h2>
+                  <p>Рік почнеться з нових можливостей у фінансовій та кар'єрній сферах. Після травня варто приділити більше уваги близьким та здоров'ю.</p>
+                  <p class="pobac">У вас все вийде!<br> ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Телец -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-2')">
+              
+              <h3>Телец♉</h3>
+          </div>
+          <div id="zodiac-modal-2" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-2')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-2')">&times;</span>
+                  <img src="img/телец.jpg" alt="Телец">
+                  <h2>Телец</h2>
+                  <p>Динамічний рік, що вимагатиме завзятості. Романтичні стосунки поглибляться. Будьте обережні з витратами та зберігайте спокій у складних ситуаціях.</p>
+                  <p class="pobac">Ми любимо вас!<br> ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Близнецы -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-3')">
+              
+              <h3>Близнецы♊</h3>
+          </div>
+          <div id="zodiac-modal-3" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-3')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-3')">&times;</span>
+                  <img src="img/близнецы.jpg" alt="Близнецы">
+                  <h2>Близнецы</h2>
+                  <p>Для Близнецов цей рік стане періодом особистісного зростання. Нові знайомства принесуть багато радості, а кар'єра порадує успіхами.</p>
+                  <p class="pobac">Не здавайтесь!<br> ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Рак -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-4')">
+             
+              <h3>Рак♋</h3>
+          </div>
+          <div id="zodiac-modal-4" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-4')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-4')">&times;</span>
+                  <img src="img/рак.jpg" alt="Рак">
+                  <h2>Рак</h2>
+                  <p>Емоційний рік, що принесе радість у стосунках і затишок у домі. Кар'єра вимагатиме терпіння, але результати варто чекати.</p>
+                  <p class="pobac">Ми віримо у вас!<br> ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Лев -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-5')">
+              
+              <h3>Лев♌</h3>
+          </div>
+          <div id="zodiac-modal-5" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-5')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-5')">&times;</span>
+                  <img src="img/лев.jpg" alt="Лев">
+                  <h2>Лев</h2>
+                  <p>Леви отримають шанс проявити свої таланти. Успіх у роботі та гармонія в особистих справах принесуть задоволення.</p>
+                  <p class="pobac">Будьте сміливими!<br> ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Дева -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-6')">
+           
+              <h3>Дева♍</h3>
+          </div>
+          <div id="zodiac-modal-6" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-6')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-6')">&times;</span>
+                  <img src="img/дева.jpg" alt="Дева">
+                  <h2>Дева</h2>
+                  <p>Для Дев рік буде багатий на можливості для самовдосконалення. Гарний час для подорожей та навчання.</p>
+                  <p class="pobac">Вірте у себе!<br> ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Весы -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-7')">
+            
+              <h3>Весы♎</h3>
+          </div>
+          <div id="zodiac-modal-7" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-7')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-7')">&times;</span>
+                  <img src="img/весы.jpg" alt="Весы">
+                  <h2>Весы</h2>
+                  <p>Для Терезів цей рік стане роком рівноваги. Гармонія у всіх сферах життя та нові досягнення у кар'єрі.</p>
+                  <p class="pobac">Рухайтесь вперед! <br>ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Скорпион -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-8')">
+             
+              <h3>Скорпион♏</h3>
+          </div>
+          <div id="zodiac-modal-8" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-8')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-8')">&times;</span>
+                  <img src="img/скорпион.jpg" alt="Скорпион">
+                  <h2>Скорпион</h2>
+                  <p>Інтенсивний рік, сповнений емоцій та нових викликів. Успіх у фінансах та особистих справах вас не обмине.</p>
+                  <p class="pobac">Довіряйте інтуїції! <br>ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Стрелец -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-9')">
+            
+              <h3>Стрелец♐</h3>
+          </div>
+          <div id="zodiac-modal-9" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-9')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-9')">&times;</span>
+                  <img src="img/стрелец.jpg" alt="Стрелец">
+                  <h2>Стрелец</h2>
+                  <p>Цей рік сприятиме подорожам, пригодам та новим перспективам. Використовуйте свої таланти на максимум.</p>
+                  <p class="pobac">Не бійтеся ризикувати!<br>ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Козерог -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-10')">
+             
+              <h3>Козерог♑</h3>
+          </div>
+          <div id="zodiac-modal-10" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-10')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-10')">&times;</span>
+                  <img src="img/козерог.jpg" alt="Козерог">
+                  <h2>Козерог</h2>
+                  <p>Плідний рік для кар'єри та фінансів. Ви досягнете значного прогресу завдяки наполегливості.</p>
+                  <p class="pobac">Будьте стійкими!<br> ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Водолей -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-11')">
+             
+              <h3>Водолей♒</h3>
+          </div>
+          <div id="zodiac-modal-11" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-11')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-11')">&times;</span>
+                  <img src="img/водолей.jpg" alt="Водолей">
+                  <h2>Водолей</h2>
+                  <p>Рік інновацій та ідей. Ваші плани знайдуть підтримку, а особисте життя стане гармонійним.</p>
+                  <p class="pobac">Ви унікальні!<br>ваш dripkit.</p>
+              </div>
+          </div>
+      
+          <!-- Рыбы -->
+          <div class="zodiac-card" onclick="zodiacOpenModal('zodiac-modal-12')">
+             
+              <h3>Рыбы♓</h3>
+          </div>
+          <div id="zodiac-modal-12" class="zodiac-modal" onclick="zodiacCloseModal(event, 'zodiac-modal-12')">
+              <div class="zodiac-modal-content">
+                  <span class="zodiac-close" onclick="zodiacCloseModal(event, 'zodiac-modal-12')">&times;</span>
+                  <img src="img/рыбы.jpg" alt="Рыбы">
+                  <h2>Рыбы</h2>
+                  <p>Для Риб рік стане періодом творчості та натхнення. Нові знайомства принесуть позитивні зміни.</p>
+                  <p class="pobac">Залишайтесь мрійливими!<br> ваш dripkit.</p>
+              </div>
+          </div>
+      </div>
+      
+      
+  
+  
+
+        
+      <br> <br> <footer>
+    <div>
+        <h2>093-317-90-72</h2>
+        <p>Дзвони, будемо раді почути вас!</p>
+    </div>
+    <div class="foo_logo_div">
+         <img src="img/logo.png" alt="" class="foo_logo">
+        <p>DRIPKIT</p>
+    </div>
+    <div class="social-icons">
+                  <div class="s-i1">
+                  <a href="https://www.instagram.com/_drip.kit_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="img/icons8-instagram-30.png" alt=""></a>
+                  <a href="https://t.me/drip_kit"><img src="img/icons8-телеграм-50.png" alt=""></a> 
+                  <a href="https://www.tiktok.com/@drip.kit_"><img src="img/icons8-тикток-48.png" ></a>
+                  </div>
+           <div class="s-i2"> 
+                  <p>Наші соц.мережі</p>
+           </div>
+    </div>
+            
+</footer>
+    </div>
+
+    <script>
+     $(document).ready(function(){
+      $("#hello").show();
+      $(".big_h1").show();
+      $(".box").hide();
+     })
+     $("#hello_btn").click(function(){
+      $("#hello").hide();
+      $(".big_h1").hide();
+      $(".box").show();
+     })
+
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'flex';
+    }
+
+    function closeModal(event, modalId) {
+      const modal = document.getElementById(modalId);
+      
+      // Если клик был на фоне (modal) или на кнопке закрытия (span.close)
+      if (event.target === modal || event.target.classList.contains('close')) {
+        modal.style.display = 'none';
+      }
+    }
+
+
+function zodiacOpenModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+}
+
+function zodiacCloseModal(event, modalId) {
+    const modal = document.getElementById(modalId);
+    if (event.target === modal || event.target.classList.contains('zodiac-close')) {
+        modal.style.display = 'none';
+    }
+}
+
+    </script>
+</body>
+</html>
