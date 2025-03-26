@@ -465,4 +465,7 @@ footer p {
     .contact{
         border-radius: 10px;
     }
+    footer{
+         width: 100%;
+    }
 }
